@@ -1,34 +1,33 @@
-const readlineSync = require('readline-sync');
+// const readlineSync = require('readline-sync');
 
-function rockPaperScissors() {
-  /**
-   * Play a round of Rock Paper Scissors.
-   * Prompt both players for their choices and determines the winner.
-   */
+// const player1Choice = readlineSync.question('Player 1, Enter your choice: ').toLowerCase()
+// const player2Choice = readlineSync.question('Player 2, Enter your choice: ').toLowerCase()
 
-  const player1Choice = readlineSync.question('Player 1, enter your choice (rock, paper, scissors): ').toLowerCase();
-  const player2Choice = readlineSync.question('Player 2, enter your choice (rock, paper, scissors): ').toLowerCase();
+function rockPaperScissors(player1, player2) {
 
-  // Define the winning conditions for the classic Rock Paper Scissors game
   const winningConditions = {
-    rock: 'scissors',
-    scissors: 'paper',
-    paper: 'rock'
+    rock: ['scissors', 'lizard'],
+    paper: ['rock', 'spock'],
+    scissors: ['paper', 'lizard'],
+    lizard: ['spock', 'paper'],
+    spock: ['scissors', 'rock']
   };
-
-  // Check if it's a draw
-  if (player1Choice === player2Choice) {
-    console.log('Draw');
+  
+  if (player1 == player2) {
+    return 'draw';
   }
-  // Check if player 1 wins
-  else if (winningConditions[player1Choice] === player2Choice) {
-    console.log('Player 1 Wins');
+  else if (winningConditions[player1] && winningConditions[player1].includes(player2)) {
+    return 'player1';
   }
-  // If not, player 2 wins
   else {
-    console.log('Player 2 Wins');
+    return 'player2';
   }
 }
 
-// Call the function to play the game
-rockPaperScissors();
+// rockPaperScissors(player1Choice, player2Choice);
+
+
+// Leave this code here for the automated tests
+module.exports = {
+  rockPaperScissors,
+}

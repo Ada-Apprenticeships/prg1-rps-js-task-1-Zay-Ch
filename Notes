@@ -1,0 +1,8 @@
+Function Parameters: 
+The function now takes player1Choice and player2Choice as parameters, allowing it to be tested with various inputs.
+
+Winning Conditions: 
+The winning conditions remain the same, mapping each choice to the choices it can defeat.
+
+Return Values: 
+Instead of printing the result, the function returns a string indicating the result ('player1', 'player2', or 'draw').
