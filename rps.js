@@ -19,7 +19,6 @@ function rockPaperScissors(player1, player2) {
     return 'player1';
   }
   /*
-  This line of code is checking if player1 has won the game. Here's a breakdown of what's happening:
   winningConditions[player1]: This is accessing the winningConditions object and retrieving the array of choices that player1 can beat. For example, if player1 chose "rock", this would retrieve the array ['scissors', 'lizard'].
   winningConditions[player1].includes(player2): This is checking if player2's choice is in the array of choices that player1 can beat. In other words, it's checking if player2 made a choice that player1 can win against.
   So, the entire condition is saying: "If player1 has made a choice that can beat player2's choice, then player1 wins."
