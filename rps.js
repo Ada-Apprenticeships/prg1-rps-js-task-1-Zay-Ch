@@ -10,7 +10,6 @@ function rockPaperScissors(player1, player2) {
   /*
   The winningConditions object uses arrays to store the choices that each choice can beat, allowing for easy lookup and checking of winning conditions. 
   Each array contains two elements, representing the two choices that each choice can beat. 
-  This approach is simple, efficient, and easy to understand, making it well-suited for this application.
   */
 
   if (player1 == player2) {
